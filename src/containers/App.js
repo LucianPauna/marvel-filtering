@@ -2,6 +2,7 @@ import React, { Fragment } from "react"
 import CardList from '../components/CardList/CardList'
 import SearchBox from '../components/SearchBox/SearchBox'
 import Scroll from '../components/Scroll/Scroll'
+import ErrorBoundry from "../components/ErrorBoundry/ErrorBoundry"
 import { database } from '../database'
 
 class App extends React.Component {
@@ -60,12 +61,14 @@ class App extends React.Component {
                 <h1 style={{textAlign: 'center', color: '#D00000'}}>Marvel Sorting</h1>
                 <SearchBox searchChange={this.onSearchChange} typeChange={this.onTypeChange} changeOrder={this.onChangeOrder} />
                 <Scroll>
+                    <ErrorBoundry>
                     <CardList database={filteredDatabase} visible={this.state.visible} />
 
-                    {
-                        this.state.count < filteredDatabase.length ? <div style={{display: "flex", justifyContent: "center"}}><button style={{padding: "5px 20px", margin: "30px 0", fontSize: "18px", background: "#FFF", border: "none", cursor: "pointer"}} onClick={this.loadMore} type="button">Load more</button></div> : ''
-                    }
-                    
+                        {
+                            this.state.count < filteredDatabase.length ? <div style={{display: "flex", justifyContent: "center"}}><button style={{padding: "5px 20px", margin: "30px 0", fontSize: "18px", background: "#FFF", border: "none", cursor: "pointer"}} onClick={this.loadMore} type="button">Load more</button></div> : ''
+                        }
+                        
+                    </ErrorBoundry>
                 </Scroll>
             </Fragment>
         )

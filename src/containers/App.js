@@ -13,10 +13,8 @@ class App extends React.Component {
             searchField: '',
             searchType: '',
             changeOrder: 'a-z',
-            visible: 10,
-            count: 10,
+            visible: 10
         }
-        //this.loadMore = this.loadMore.bind(this);  // * Pre-binding
     }
 
     componentDidMount() {
@@ -27,11 +25,10 @@ class App extends React.Component {
         this.setState({ database: database })
     }
 
-    loadMore = () => {  // * ES6 No binding
+    loadMore = () => {
         this.setState((prev) => {
           return {visible: prev.visible + 10};
         });
-        this.setState({count: this.state.count + this.state.count})
     }
 
     onSearchChange = (event) => {
@@ -63,11 +60,9 @@ class App extends React.Component {
                 <Scroll>
                     <ErrorBoundry>
                     <CardList database={filteredDatabase} visible={this.state.visible} />
-
                         {
-                            this.state.count < filteredDatabase.length ? <div style={{display: "flex", justifyContent: "center"}}><button style={{padding: "5px 20px", margin: "30px 0", fontSize: "18px", background: "#FFF", border: "none", cursor: "pointer"}} onClick={this.loadMore} type="button">Load more</button></div> : ''
-                        }
-                        
+                            this.state.visible < filteredDatabase.length ? <div style={{display: "flex", justifyContent: "center"}}><button style={{padding: "5px 20px", margin: "30px 0", fontSize: "18px", background: "#FFF", border: "none", cursor: "pointer"}} onClick={this.loadMore} type="button">Load more</button></div> : ''
+                        }                   
                     </ErrorBoundry>
                 </Scroll>
             </Fragment>

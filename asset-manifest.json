@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/marvel-filtering/static/css/main.efdbd253.css",
-    "main.js": "/marvel-filtering/static/js/main.74860c8d.js",
+    "main.js": "/marvel-filtering/static/js/main.12d36b98.js",
     "static/js/787.6ff586c9.chunk.js": "/marvel-filtering/static/js/787.6ff586c9.chunk.js",
     "static/media/thor.webp": "/marvel-filtering/static/media/thor.0414273ddd7bea5e1b25.webp",
     "static/media/carnage.webp": "/marvel-filtering/static/media/carnage.ae4b34bcf038cada59fc.webp",
@@ -41,11 +41,11 @@
     "static/media/vulture.webp": "/marvel-filtering/static/media/vulture.801066fe345c88c48735.webp",
     "index.html": "/marvel-filtering/index.html",
     "main.efdbd253.css.map": "/marvel-filtering/static/css/main.efdbd253.css.map",
-    "main.74860c8d.js.map": "/marvel-filtering/static/js/main.74860c8d.js.map",
+    "main.12d36b98.js.map": "/marvel-filtering/static/js/main.12d36b98.js.map",
     "787.6ff586c9.chunk.js.map": "/marvel-filtering/static/js/787.6ff586c9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.efdbd253.css",
-    "static/js/main.74860c8d.js"
+    "static/js/main.12d36b98.js"
   ]
 }
